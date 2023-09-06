@@ -66,6 +66,53 @@ public:
 
     }
 
+    Fraction Minus(Fraction min)
+    {
+        Fraction MIN;
+        bol = 0;
+
+        for (int i = 1; bol < 1; i++)
+        {
+            if (i % min.denominator == 0 && i % denominator == 0)
+            {
+                setdenom1 = i / denominator;
+                setdenom2 = i / min.denominator;
+
+                MIN.denominator = i;
+
+                numerator_stock = numerator * setdenom1;
+                MIN.numerator = min.numerator * setdenom2;
+
+                MIN.numerator = numerator_stock - MIN.numerator;
+
+
+                bol = 1;
+            }
+        }
+
+        cout << "Minus fraction:\n" << MIN.numerator << endl << "--" << endl << MIN.denominator << endl << endl << endl;
+        return MIN;
+
+    }
+
+    Fraction Division(Fraction divis)
+    {
+
+        Fraction DIVIS;
+
+        numerator_stock = divis.numerator;
+        divis.numerator = divis.denominator;
+        divis.denominator = divis.numerator;
+
+        DIVIS.numerator = numerator * divis.denominator;
+        DIVIS.denominator = denominator * divis.numerator;
+
+        cout << "Factor fraction:\n" << DIVIS.numerator << endl << "--" << endl << DIVIS.denominator << endl << endl << endl;
+        return DIVIS;
+
+    }
+
+
 
 
     void Print()
@@ -111,5 +158,15 @@ int main()
     Fraction FACT;
     FACT.init(3, 4);
     a.Factor(FACT);
+
+
+    Fraction MIN;
+    MIN.init(3, 10);
+    a.Minus(MIN);
+
+    Fraction DIVIS;
+    DIVIS.init(3, 10);
+    a.Division(DIVIS);
+
 
 }
