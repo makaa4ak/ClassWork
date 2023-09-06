@@ -24,7 +24,8 @@ public://интерфейс класса
 
 	}
 
-	void SetX(int v)
+
+
 	{
 		if(v > 0)
 		{
