@@ -107,7 +107,7 @@ public:
         DIVIS.numerator = numerator * divis.denominator;
         DIVIS.denominator = denominator * divis.numerator;
 
-        cout << "Factor fraction:\n" << DIVIS.numerator << endl << "--" << endl << DIVIS.denominator << endl << endl << endl;
+        cout << "Division fraction:\n" << DIVIS.numerator << endl << "--" << endl << DIVIS.denominator << endl << endl << endl;
         return DIVIS;
 
     }
